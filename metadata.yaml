@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-homepage: "https://www.example.com"
-documentation: "https://www.example.com/documentation"
+homepage: "https://jumpgroup.it"
+documentation: "https://docs.avacysolution.com"
 versions:
-  - sha: ec67dccc67df235931444215a2f18cdbcb53580b
-    changeNotes: Initial commit
+  - sha: ee182ead0ebb8456e5860f1e1b434a2cd6a80dc8
+    changeNotes: create Avacy template
