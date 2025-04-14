@@ -163,9 +163,9 @@ function main() {
     }
     log(version_in_use);
     if(!overrides && version) {
-      log('https://jumpgroup.avacy-cdn.com/'+ version_in_use +'/dist/');
+      log('https://' + avacyTeam + '.avacy-cdn.com/'+ version_in_use +'/dist/');
       overrides = {};
-      overrides.publicPath = 'https://jumpgroup.avacy-cdn.com/'+ version_in_use +'/dist/';
+      overrides.publicPath = 'https://' + avacyTeam + '.avacy-cdn.com/'+ version_in_use +'/dist/';
     }
     
     log(overrides);
@@ -189,8 +189,8 @@ function main() {
 
 function embedScripts(onSuccess, onFail, version_in_use) {
   const scriptsToEmbed = [];
-  scriptsToEmbed.push('https://jumpgroup.avacy-cdn.com/'+ version_in_use +'/dist/oil.min.js?team='+ encodeUriComponent(avacyTeam) +'&uuid='+ encodeUriComponent(avacyId) + encodedOverrides);
-  scriptsToEmbed.push('https://jumpgroup.avacy-cdn.com/'+ version_in_use +'/dist/oilstub.min.js');
+  scriptsToEmbed.push('https://' + avacyTeam + '.avacy-cdn.com/'+ version_in_use +'/dist/oil.min.js?team='+ encodeUriComponent(avacyTeam) +'&uuid='+ encodeUriComponent(avacyId) + encodedOverrides);
+  scriptsToEmbed.push('https://' + avacyTeam + '.avacy-cdn.com/'+ version_in_use +'/dist/oilstub.min.js');
   log(scriptsToEmbed);
 
   let scriptsInjected = 0;
