@@ -15,5 +15,5 @@
 homepage: "https://jumpgroup.it"
 documentation: "https://docs.avacysolution.com"
 versions:
-  - sha: 0dccb2f977d5c466f10350a0e6b8b9925ce815a5
-    changeNotes: remove contributing file
+  - sha: af307eecd2a84fc81525c89b28cd18686f80f3b1
+    changeNotes: Initial release
