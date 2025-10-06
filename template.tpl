@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -60,6 +60,336 @@ ___TEMPLATE_PARAMETERS___
     "notSetText": "This field is required for connecting Avacy to Google Tag Manager."
   },
   {
+    "type": "GROUP",
+    "name": "defaultConsent",
+    "displayName": "Default Consent",
+    "groupStyle": "ZIPPY_OPEN",
+    "subParams": [
+      {
+        "type": "SELECT",
+        "name": "analytics_storage",
+        "displayName": "analytics_storage",
+        "macrosInSelect": false,
+        "selectItems": [
+          {
+            "value": "denied",
+            "displayValue": "Denied"
+          },
+          {
+            "value": "granted",
+            "displayValue": "Granted"
+          }
+        ],
+        "simpleValueType": true
+      },
+      {
+        "type": "SELECT",
+        "name": "ad_storage",
+        "displayName": "ad_storage",
+        "macrosInSelect": false,
+        "selectItems": [
+          {
+            "value": "denied",
+            "displayValue": "Denied"
+          },
+          {
+            "value": "granted",
+            "displayValue": "Granted"
+          }
+        ],
+        "simpleValueType": true
+      },
+      {
+        "type": "SELECT",
+        "name": "personalization_storage",
+        "displayName": "personalization_storage",
+        "macrosInSelect": false,
+        "selectItems": [
+          {
+            "value": "denied",
+            "displayValue": "Denied"
+          },
+          {
+            "value": "granted",
+            "displayValue": "Granted"
+          }
+        ],
+        "simpleValueType": true
+      },
+      {
+        "type": "SELECT",
+        "name": "functionality_storage",
+        "displayName": "functionality_storage",
+        "macrosInSelect": false,
+        "selectItems": [
+          {
+            "value": "denied",
+            "displayValue": "Denied"
+          },
+          {
+            "value": "granted",
+            "displayValue": "Granted"
+          }
+        ],
+        "simpleValueType": true
+      },
+      {
+        "type": "SELECT",
+        "name": "security_storage",
+        "displayName": "security_storage",
+        "macrosInSelect": false,
+        "selectItems": [
+          {
+            "value": "denied",
+            "displayValue": "Denied"
+          },
+          {
+            "value": "granted",
+            "displayValue": "Granted"
+          }
+        ],
+        "simpleValueType": true
+      },
+      {
+        "type": "SELECT",
+        "name": "ad_user_data",
+        "displayName": "ad_user_data",
+        "macrosInSelect": false,
+        "selectItems": [
+          {
+            "value": "denied",
+            "displayValue": "Denied"
+          },
+          {
+            "value": "granted",
+            "displayValue": "Granted"
+          }
+        ],
+        "simpleValueType": true
+      },
+      {
+        "type": "SELECT",
+        "name": "ad_personalization",
+        "displayName": "ad_personalization",
+        "macrosInSelect": false,
+        "selectItems": [
+          {
+            "value": "denied",
+            "displayValue": "Denied"
+          },
+          {
+            "value": "granted",
+            "displayValue": "Granted"
+          }
+        ],
+        "simpleValueType": true
+      },
+      {
+        "type": "TEXT",
+        "name": "waitForUpdate",
+        "displayName": "Wait for update",
+        "simpleValueType": true,
+        "valueValidators": [
+          {
+            "type": "NON_NEGATIVE_NUMBER"
+          }
+        ],
+        "defaultValue": 2000
+      }
+    ]
+  },
+  {
+    "type": "GROUP",
+    "name": "defaultConsentByRegion",
+    "displayName": "Default Consent ( by region )",
+    "groupStyle": "ZIPPY_CLOSED",
+    "subParams": [
+      {
+        "type": "PARAM_TABLE",
+        "name": "regionSpecificDefaultConsent",
+        "displayName": "",
+        "paramTableColumns": [
+          {
+            "param": {
+              "type": "TEXT",
+              "name": "region_code",
+              "displayName": "Region Code",
+              "simpleValueType": true,
+              "valueValidators": [
+                {
+                  "type": "NON_EMPTY"
+                }
+              ],
+              "valueHint": "IT"
+            },
+            "isUnique": true
+          },
+          {
+            "param": {
+              "type": "SELECT",
+              "name": "analytics_storage",
+              "displayName": "analytics_storage",
+              "macrosInSelect": false,
+              "selectItems": [
+                {
+                  "value": "denied",
+                  "displayValue": "Denied"
+                },
+                {
+                  "value": "granted",
+                  "displayValue": "Granted"
+                }
+              ],
+              "simpleValueType": true,
+              "defaultValue": "denied"
+            },
+            "isUnique": false
+          },
+          {
+            "param": {
+              "type": "SELECT",
+              "name": "ad_storage",
+              "displayName": "ad_storage",
+              "macrosInSelect": false,
+              "selectItems": [
+                {
+                  "value": "granted",
+                  "displayValue": "Granted"
+                },
+                {
+                  "value": "denied",
+                  "displayValue": "Denied"
+                }
+              ],
+              "simpleValueType": true,
+              "defaultValue": "denied"
+            },
+            "isUnique": false
+          },
+          {
+            "param": {
+              "type": "SELECT",
+              "name": "personalization_storage",
+              "displayName": "personalization_storage",
+              "macrosInSelect": false,
+              "selectItems": [
+                {
+                  "value": "granted",
+                  "displayValue": "Granted"
+                },
+                {
+                  "value": "denied",
+                  "displayValue": "Denied"
+                }
+              ],
+              "simpleValueType": true,
+              "defaultValue": "denied"
+            },
+            "isUnique": false
+          },
+          {
+            "param": {
+              "type": "SELECT",
+              "name": "functionality_storage",
+              "displayName": "functionality_storage",
+              "macrosInSelect": false,
+              "selectItems": [
+                {
+                  "value": "granted",
+                  "displayValue": "Granted"
+                },
+                {
+                  "value": "denied",
+                  "displayValue": "Denied"
+                }
+              ],
+              "simpleValueType": true,
+              "defaultValue": "denied"
+            },
+            "isUnique": false
+          },
+          {
+            "param": {
+              "type": "SELECT",
+              "name": "security_storage",
+              "displayName": "security_storage",
+              "macrosInSelect": false,
+              "selectItems": [
+                {
+                  "value": "granted",
+                  "displayValue": "Granted"
+                },
+                {
+                  "value": "denied",
+                  "displayValue": "Denied"
+                }
+              ],
+              "simpleValueType": true,
+              "defaultValue": "denied"
+            },
+            "isUnique": false
+          },
+          {
+            "param": {
+              "type": "SELECT",
+              "name": "ad_user_data",
+              "displayName": "ad_user_data",
+              "macrosInSelect": false,
+              "selectItems": [
+                {
+                  "value": "granted",
+                  "displayValue": "Granted"
+                },
+                {
+                  "value": "denied",
+                  "displayValue": "Denied"
+                }
+              ],
+              "simpleValueType": true,
+              "defaultValue": "denied"
+            },
+            "isUnique": false
+          },
+          {
+            "param": {
+              "type": "SELECT",
+              "name": "ad_personalization",
+              "displayName": "ad_personalization",
+              "macrosInSelect": false,
+              "selectItems": [
+                {
+                  "value": "granted",
+                  "displayValue": "Granted"
+                },
+                {
+                  "value": "denied",
+                  "displayValue": "Denied"
+                }
+              ],
+              "simpleValueType": true,
+              "defaultValue": "denied"
+            },
+            "isUnique": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "CHECKBOX",
+    "name": "urlPassthrough",
+    "checkboxText": "URL passthrough",
+    "simpleValueType": true,
+    "defaultValue": true
+  },
+  {
+    "type": "CHECKBOX",
+    "name": "adsDataRedaction",
+    "checkboxText": "Ads data redaction",
+    "simpleValueType": true,
+    "defaultValue": true
+  },
+  {
     "type": "CHECKBOX",
     "name": "advancedOptions",
     "checkboxText": "Enable Advanced Settings",
@@ -116,31 +446,66 @@ const JSON = require('JSON');
 const setDefaultConsentState = require('setDefaultConsentState');
 const getCookieValues = require('getCookieValues');
 const updateConsentState = require('updateConsentState');
+const makeInteger = require('makeInteger');
 const avacyId = data.id;
 const avacyTeam = data.team;
 const enableOverrides = data.enableOverrides;
 const advancedOptions = data.advancedOptions;
 const version = data.version;
+const urlPassthrough = data.urlPassthrough;
+const adsDataRedaction = data.adsDataRedaction;
 let overrides = data.overrides;
 let hasDefaultState = false;
 let encodedOverrides = '';
 
 function main() {
+  log('data =', data);
+  log('urlPassthrough: ' + urlPassthrough);
+  log('adsDataRedaction: ' + adsDataRedaction);
+
+  gtagSet({
+    'developer_id.dYWUyYT': true,
+    url_passthrough: urlPassthrough,
+    ads_data_redaction: adsDataRedaction
+  });
+  
+  log('quiii');
+  
+  if (data.regionSpecificDefaultConsent) {
+    log('Avacy - default consent feature enabled');
+    for (const consent of data.regionSpecificDefaultConsent) {
+      setDefaultConsentState({
+        analytics_storage: consent.analytics_storage,
+        ad_storage: consent.ad_storage,
+        personalization_storage: consent.personalization_storage,
+        functionality_storage: consent.functionality_storage,
+        security_storage: consent.security_storage,
+        ad_user_data: consent.ad_user_data,
+        ad_personalization: consent.ad_personalization,
+        region: [consent.region_code],
+        wait_for_update: makeInteger(data.waitForUpdate)
+      });
+    }
+  }
+  
   if(!hasDefaultState) {
+    log('Avacy - default consent state');
     setDefaultConsentState({
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      analytics_storage: 'denied',
-      functionality_storage: 'denied',
-      personalization_storage: 'denied',
-      security_storage: 'denied'
+      analytics_storage: data.analytics_storage,
+      ad_storage: data.ad_storage,
+      personalization_storage: data.personalization_storage,
+      functionality_storage: data.functionality_storage,
+      security_storage: data.security_storage,
+      ad_user_data: data.ad_user_data,
+      ad_personalization: data.ad_personalization,
+      region: [data.region_code],
+      wait_for_update: makeInteger(data.waitForUpdate)
     });
   }
   
-  log(avacyId);
-  log(avacyTeam);
-  log(version);
+  log('avacyId: ' + avacyId);
+  log('avacyTeam: ' + avacyTeam);
+  log('version: ' + version);
 
   if (!avacyId || !avacyTeam) {
     log('Avacy ID or Team not set');
@@ -562,7 +927,28 @@ ___WEB_PERMISSIONS___
         "publicId": "write_data_layer",
         "versionId": "1"
       },
-      "param": []
+      "param": [
+        {
+          "key": "keyPatterns",
+          "value": {
+            "type": 2,
+            "listItem": [
+              {
+                "type": 1,
+                "string": "developer_id.dYWUyYT"
+              },
+              {
+                "type": 1,
+                "string": "url_passthrough"
+              },
+              {
+                "type": 1,
+                "string": "ads_data_redaction"
+              }
+            ]
+          }
+        }
+      ]
     },
     "clientAnnotations": {
       "isEditedByUser": true
